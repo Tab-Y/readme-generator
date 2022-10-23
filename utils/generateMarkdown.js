@@ -3,31 +3,22 @@
 function renderLicenseBadge(license) {
   switch (license) {
     case 'none':
-      console.log('made it in none');
       return '';
     case 'Academic Free License v3.0':
-      console.log('made it in academic');
       return `\n![License](https://img.shields.io/badge/License-afl_3.0-blue)`;
     case 'Apache license 2.0':
-      console.log('made it in apache');
       return `\n![License](https://img.shields.io/badge/License-apache_2.0-blue)`;
     case 'MIT':
-      console.log('made it in mit');
       return `\n![License](https://img.shields.io/badge/License-mit-blue)`;
     case 'Microsoft Public License':
-      console.log('made it in mpl');
       return `\n![License](https://img.shields.io/badge/License-ms_pl-blue)`;
     case 'Open Software License 3.0':
-      console.log('made it in osl');
       return `\n![License](https://img.shields.io/badge/License-osl_2.0-blue)`;
     case 'Mozilla Public License 2.0':
-      console.log('made it in mpl2.0');
       return `\n![License](https://img.shields.io/badge/License-mpl_2.0-blue)`;
     case 'Creative Commons license family':
-      console.log('made it in cc');
       return `\n![License](https://img.shields.io/badge/License-acc-blue)`;
     case 'Artistic License 2.0':
-      console.log('made it in art');
       return `\n![License](https://img.shields.io/badge/License-artistic_2.0-blue)`;
   };
 }
@@ -38,6 +29,7 @@ function renderLicenseLink(license) {
   if (license === 'none') {
     return '';
   } else {
+    // inserts a link to license section 
     return `\n- [License](#license)`
   };
 }
@@ -45,9 +37,11 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
+  // can be changed to switch statement for each selected license information
   if (license === 'none') {
     return '';
   } else {
+    // inserts a new header for license if there is one, and formats to markdown 
     return `\n\n## License \n
   info about the license  \n`
   };
@@ -60,9 +54,10 @@ function generateMarkdown(data) {
   let licenseLink = renderLicenseLink(license);
   let licenseSection = renderLicenseSection(license);
   let installation = `${data.installation}`;
-  let usage = `${data.usage}`
-  let description = `${data.description}`
-  let credits = `${data.contributing}`
+  let usage = `${data.usage}`;
+  let description = `${data.description}`;
+  let credits = `${data.contributing}`;
+// keep alligned left to format document correctly
   return `# ${data.title} ${licenseBadge}\n
 ## Description \n
 ${description}\n 
