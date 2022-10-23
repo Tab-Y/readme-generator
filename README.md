@@ -8,16 +8,26 @@ This is a professional README generator, to expedite the formatting and filling 
 
 Install Node.js
 Install the NPM module inquirer version 8.2.4,
-cd into folder
-run command node index.js in gitbash 
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+To use this project: 
+1. Make sure Node.js is installed. (made in v16.18.0)
+    ```
+    node -v
+2. Clone to local repo.
+3. Install inquirer version 8.2.4.
+    ``` 
+    npm install inquirer@8.2.4
+4. run the program
+    ```
+    node index.js
+5. Answer prompts
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
 
-![alt text](assets/images/screenshot.png)
+![Usage Screenshot](./assets/images/usage_screenshot.png)
+
+![usage video/gif](pathToVideo.gif)
 
 ## Credits
 
