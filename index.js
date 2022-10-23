@@ -8,9 +8,6 @@ const questions = [
         type: 'input',
         message: 'What is the title of your README?',
         name: 'title',
-        validate: (value) => {
-            value ? true : 'Please provide Title.'
-        },
     },
     {
         type: 'input',
@@ -48,25 +45,31 @@ const questions = [
         type: 'input',
         message: 'What is your GitHub Username?',
         name: 'username',
-        validate: (value) => {
-            value ? true : 'Please provide GitHub Username.'
-        },
     },
     {
         type: 'input',
         message: 'What is a good email to be reached at?',
         name: 'email',
-        validate: (value) => {
-            value ? true : 'Please provide Email.'
-        },
     },
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.appendFile(fileName, JSON.stringify(data, null, '\t'), (err) =>
+        err ? console.error(err) : console.log('success')
+        );
+};
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer
+        .prompt(questions)
+        .then((data) => {
+        const fileName = `${data.title.toLowerCase().split(' ').join(' ')}.json`;
+        writeToFile(fileName, data);
+        },
+        );
+};
 
 // Function call to initialize app
 init();
