@@ -3,6 +3,7 @@
 ## Description
 
 This is a professional README generator, to expedite the formatting and filling in information for a README file.
+It was created to help create README files with a professional structure that can be editted to add fine details after it is made.
 
 ## Installation
 
@@ -23,11 +24,12 @@ To use this project:
     ```
     node index.js
 5. Answer prompts
+6. README is generated into assets folder
 
 
 ![Usage Screenshot](./assets/images/usage_screenshot.png)
 
-![usage video/gif](pathToVideo.gif)
+![usage video](https://app.castify.com/view/cfa81440-a9e6-425b-9017-c23c9c08dc29)
 
 ## Credits
 

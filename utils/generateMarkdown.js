@@ -38,12 +38,25 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   // can be changed to switch statement for each selected license information
-  if (license === 'none') {
-    return '';
-  } else {
-    // inserts a new header for license if there is one, and formats to markdown 
-    return `\n\n## License \n
-  info about the license  \n`
+  switch (license) {
+    case 'none':
+      return '';
+    case 'Academic Free License v3.0':
+      return `\n\n## License \n\nAcademic Free License v3.0 \nPlease refer to License in repository.  \n`;
+    case 'Apache license 2.0':
+      return `\n\n## License \n\nApache License 2.0 \nPlease refer to License in repository.  \n`;
+    case 'MIT':
+      return `\n\n## License \n\nMIT License \nPlease refer to License in repository.  \n`;
+    case 'Microsoft Public License':
+      return `\n\n## License \n\nMicrosoft Public License \nPlease refer to License in repository.  \n`;
+    case 'Open Software License 3.0':
+      return `\n\n## License \n\nOpen Software License 3.0 \nPlease refer to License in repository.  \n`;
+    case 'Mozilla Public License 2.0':
+      return `\n\n## License \n\nMozilla Public License \ninfo about the license  \n`;
+    case 'Creative Commons license family':
+      return `\n\n## License \n\nCreative Commons License 2.0 \nPlease refer to License in repository.  \n`;
+    case 'Artistic License 2.0':
+      return `\n\n## License \n\nArtistic License 2.0 \nPlease refer to License in repository.  \n`;
   };
 }
 
