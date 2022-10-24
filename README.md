@@ -27,9 +27,8 @@ To use this project:
 6. README is generated into assets folder
 
 
-![Usage Screenshot](./assets/images/usage_screenshot.png)
+[![Usage Screenshot](./assets/images/usage_screenshot.png)](https://app.castify.com/view/cfa81440-a9e6-425b-9017-c23c9c08dc29) "Click on screenshot to view walkthrough video"
 
-![usage video](https://app.castify.com/view/cfa81440-a9e6-425b-9017-c23c9c08dc29)
 
 ## Credits
 
